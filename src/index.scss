@@ -1,0 +1,188 @@
+$primary-color: #22b8cf;
+$secondary-color: #c5f6fa;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: $secondary-color;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: $primary-color;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .search-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .search-input {
+      width: 50%;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .search-btn {
+      transform: translateX(-200%);
+      border: none;
+      background-color: transparent;
+
+      .search-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f3f5;
+  transition: all 0.5s linear;
+
+  &:hover {
+    background-color: #fff4e6;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #f4fce3;
+  }
+
+  p {
+    padding-left: 1rem;
+  }
+}
+
+.pagination {
+  margin-top: 2rem;
+  align-self: center;
+  display: flex;
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 0.7rem;
+    padding: 0.4rem;
+    border: 1px solid black;
+  }
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .card {
+    background-color: #fff;
+    width: 300px;
+    margin: 2rem;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.false {
+  color: black;
+}
+
+.true {
+  color: $primary-color;
+}
+
+.movie-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  span {
+    background-color: #333;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+
+    &.green {
+      color: lightgreen;
+    }
+
+    &.orange {
+      color: orange;
+    }
+
+    &.red {
+      color: red;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    .search-form {
+      .search-input {
+        width: 75%;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .card-list {
+    .card {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+
+    .search-form {
+      width: 100%;
+    }
+  }
+
+  .card-list {
+    .card {
+      width: 200px;
+      margin: 2rem 1rem;
+    }
+  }
+}
