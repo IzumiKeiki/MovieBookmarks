@@ -30,10 +30,12 @@ const movieReducer = (draft, action) => {
 };
 
 export const MovieProvider = ({ children }) => {
+  const storage = JSON.parse(localStorage.getItem("movie"));
+
   const initialState = {
     movies: [],
     save: false,
-    list: [],
+    list: storage ? storage : [],
     page: 1,
     searchTerm: "",
   };

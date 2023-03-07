@@ -110,14 +110,15 @@ $secondary-color: #c5f6fa;
       width: 100%;
     }
   }
-}
 
-.false {
-  color: black;
-}
+  .false {
+    color: black;
+  }
 
-.true {
-  color: $primary-color;
+  .true {
+    color: $secondary-color;
+    background-color: $primary-color;
+  }
 }
 
 .movie-info {
